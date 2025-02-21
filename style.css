@@ -48,6 +48,7 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -102,3 +103,17 @@ p {
   z-index: 2;
 }
 
+
+#footer{
+  padding-right: 50vw;
+  padding-top: 30vh;
+}
+
+h3{
+  font-size: 40px;
+  font-weight: 100;
+}
+
+a{
+  text-decoration: none;
+}
