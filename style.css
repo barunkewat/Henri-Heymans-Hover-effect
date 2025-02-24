@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +15,11 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: whitesmoke;
-  font-family: "PPNM";
+  font-family: "PPNM", Arial, sans-serif;
 }
 
 body::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 img {
@@ -31,23 +30,28 @@ img {
   will-change: transform;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 100;
+h1, p, h3 {
   text-transform: uppercase;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 3vw, 4rem);
   letter-spacing: -1px;
   line-height: 0.8;
 }
 
 p {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 100;
-  padding: 40px;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  padding: clamp(10px, 5vw, 40px);
 }
 
-#intro,
-#outro {
+h3 {
+  font-size: clamp(1.5rem, 3vw, 3.5rem);
+  font-weight: 400;
+}
+
+#intro, #outro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +66,6 @@ p {
   height: max-content;
 }
 
-
 .awards-list {
   border: 1px solid black;
 }
@@ -79,14 +82,13 @@ p {
   transform: translateY(-160px);
 }
 
-.award-name,
-.award-project {
+.award-name, .award-project {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  padding: 10px 40px;
+  padding: clamp(5px, 2vw, 40px);
   cursor: pointer;
   border-bottom: 1px solid black;
   background-color: black;
@@ -102,141 +104,40 @@ p {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  width: 30%;
-  height: 30%;
-  z-index: 2;
-}
-
-
-#footer{
-  padding-right: 50vw;
-  padding-top: 30vh;
-}
-
-h3{
-  font-size: 40px;
-  font-weight: 100;
-}
-
-a{
-  text-decoration: none;
-}
-
-
-
-
-@media screen and (max-width: 480px) {
-  body {
-  width: 100%;
-  max-width: 480px;
-  overflow-x: hidden;
-  background-color: whitesmoke;
-  font-family: "Arial";
-}
-
-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  will-change: transform;
-}
-
-h1 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  line-height: 0.8;
-}
-
-p {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 20px;
-  padding-bottom: 50px;
-}
-
-#intro,
-#outro {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#intro>h1, #outro >h1{
-  font-size: 4rem;
-}
-
-.awards {
-  height: max-content;
-}
-
-
-.awards-list {
-  border: 1px solid black;
-}
-
-.award {
-  height: 80px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.award-wrapper {
-  position: relative;
-  height: 240px;
-  will-change: transform;
-  transform: translateY(-160px);
-}
-
-.award-name,
-.award-project {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  padding: 5px 20px;
-  cursor: pointer;
-  border-bottom: 1px solid black;
-  background-color: black;
-  color: whitesmoke;
-}
-
-.award-name {
-  background-color: whitesmoke;
-  color: black;
-}
-
-.award-preview {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 75%;
-  height: 25%;
+  width: clamp(30%, 50vw, 75%);
+  height: clamp(20%, 40vh, 30%);
   z-index: 2;
   background-position: center;
   background-size: cover;
 }
 
-
-#footer{
-  padding: 0 20px 20vh;
+#footer {
+  padding: clamp(10px, 5vw, 50vw) clamp(10px, 5vw, 20vw) clamp(10px, 5vw, 30vh);
 }
 
-h3{
-  font-size: 32px;
-  font-weight: 400;
-}
-
-a{
+a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+
+  p {
+    font-size: clamp(0.8rem, 4vw, 1.5rem);
+  }
+
+  .award-name, .award-project {
+    padding: clamp(5px, 3vw, 20px);
+  }
+
+  .award-preview {
+    width: 75%;
+    height: 25%;
+  }
+
+  #footer {
+    padding: 0 10px 10vh;
+  }
 }
