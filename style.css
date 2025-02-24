@@ -18,6 +18,9 @@ body {
   background-color: whitesmoke;
   font-family: "PPNM";
 }
+body::-webkit-scrollbar {
+	display: none;
+}
 
 img {
   position: absolute;
