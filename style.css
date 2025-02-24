@@ -131,7 +131,7 @@ a{
   max-width: 480px;
   overflow-x: hidden;
   background-color: whitesmoke;
-  font-family: "PPNM";
+  font-family: "Arial";
 }
 
 img {
@@ -144,7 +144,7 @@ img {
 
 h1 {
   font-size: 1.25rem;
-  font-weight: 100;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
   line-height: 0.8;
@@ -153,7 +153,7 @@ h1 {
 p {
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 700;
   padding: 20px;
   padding-bottom: 50px;
 }
@@ -232,7 +232,7 @@ p {
 
 h3{
   font-size: 32px;
-  font-weight: 100;
+  font-weight: 700;
 }
 
 a{
